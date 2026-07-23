@@ -1,6 +1,4 @@
-Here is your README — copy everything between the lines and paste it into a file called `README.md` in your repo:
 
----
 
 ```markdown
 # CASMA — Computer-Aided Sperm Morphology Analyser
@@ -9,7 +7,7 @@ Here is your README — copy everything between the lines and paste it into a fi
 
 ---
 
-## Overview
+ Overview
 
 CASMA is a Python-based image analysis pipeline designed to replicate the workflow of commercial computer-aided sperm analysis (CASA/CASMA) systems used in UKAS-accredited andrology laboratories. It segments sperm heads from brightfield microscopy images, computes six morphometric parameters, classifies each sperm as normal or abnormal against WHO reference ranges, and generates ALCOA+-compliant audit trails for diagnostic quality assurance.
 
@@ -17,7 +15,7 @@ Built as part of independent research into diagnostic andrology workflows and la
 
 ---
 
-## Features
+ Features
 
 | Module | Description |
 |--------|-------------|
@@ -31,7 +29,7 @@ Built as part of independent research into diagnostic andrology workflows and la
 
 ---
 
-## WHO 6th Edition Criteria Applied
+ WHO 6th Edition Criteria Applied
 
 | Parameter | Normal Range | Source |
 |-----------|--------------|--------|
@@ -46,7 +44,7 @@ Built as part of independent research into diagnostic andrology workflows and la
 
 ---
 
-## Installation
+ Installation
 
 ```bash
 git clone https://github.com/AdrianHall23/CASMA-Sperm-Morphology-Analyser.git
@@ -54,7 +52,7 @@ cd CASMA-Sperm-Morphology-Analyser
 pip install -r requirements.txt
 ```
 
-### Requirements
+ Requirements
 - Python ≥ 3.9
 - numpy
 - scipy
@@ -63,28 +61,28 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
+ Usage
 
-### Basic run
+ Basic run
 ```bash
 python casma_analyser.py --image sample_image.tif --scale 0.12
 ```
 
-### Arguments
+ Arguments
 | Flag | Description | Default |
 |------|-------------|---------|
 | `--image` | Path to microscopy image (TIFF, PNG, JPG) | *required* |
 | `--scale` | Micrometres per pixel (calibrate per objective) | `0.12` |
 | `--outdir` | Output directory for reports | `casma_output` |
 
-### Example with 40× objective
+ Example with 40× objective
 ```bash
 python casma_analyser.py --image patient_sample_001.tif --scale 0.12 --outdir results/patient_001
 ```
 
 ---
 
-## Outputs
+ Outputs
 
 ```
 casma_output/
